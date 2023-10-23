@@ -13,6 +13,10 @@ into the {body} tag of the default.hbs template --}}
     .hp-header {
         background-image: url("{{asset "img/richard-horvath-RAZU_R66vUc-unsplash.jpg"}}");
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 45vw;
     }
 
 
@@ -24,7 +28,7 @@ into the {body} tag of the default.hbs template --}}
   @media only screen and (min-width: 900px) {
 
         .cta-button {
-            background-color: rgba(255,255,255,0.2)!important; 
+            background-color: rgba(255,255,255,0.2)!important;
             color: white!important;
         }
 
@@ -164,7 +168,7 @@ into the {body} tag of the default.hbs template --}}
     </div>
 
 
-    
+
     <!--<article class="article {{post_class}}">
 
         <header class="article-header gh-canvas">
