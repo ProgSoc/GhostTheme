@@ -1,0 +1,27 @@
+{{#if isSecondary}}
+    {{#foreach navigation}}
+    <a class="{{concat "gh-social-" slug}}" href="{{url}}" title="{{label}}" target="_blank" rel="noopener">
+        {{~#match slug "avatar"~}}{{> "icons/avatar"}}{{/match~}}
+        {{~#match slug "discord"~}}{{> "icons/discord"}}{{/match~}}
+        {{~#match slug "facebook"~}}{{> "icons/facebook"}}{{/match~}}
+        {{~#match slug "ghost-logo"~}}{{> "icons/ghost-logo"}}{{/match~}}
+        {{~#match slug "github"~}}{{> "icons/github"}}{{/match~}}
+        {{~#match slug "infinity"~}}{{> "icons/infinity"}}{{/match~}}
+        {{~#match slug "linkedin"~}}{{> "icons/linkedin"}}{{/match~}}
+        {{~#match slug "loader"~}}{{> "icons/loader"}}{{/match~}}
+        {{~#match slug "location"~}}{{> "icons/location"}}{{/match~}}
+        {{~#match slug "night"~}}{{> "icons/night"}}{{/match~}}
+        {{~#match slug "point"~}}{{> "icons/point"}}{{/match~}}
+        {{~#match slug "rss"~}}{{> "icons/rss"}}{{/match~}}
+        {{~#match slug "twitter"~}}{{> "icons/twitter"}}{{/match~}}
+        {{~#match slug "website"~}}{{> "icons/website"}}{{/match~}}
+    </a>
+    {{/foreach}}
+{{else}}
+<ul class="nav">
+    {{#foreach navigation}}
+    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+    {{#if psnavend}}{{{psnavend}}}{{/if}}
+</ul>
+{{/if}}
