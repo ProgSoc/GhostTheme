@@ -1,6 +1,6 @@
 {{#if isSecondary}}
     {{#foreach navigation}}
-    <a class="{{concat "gh-social-" slug}}" href="{{url}}" title="{{label}}" target="_blank" rel="noopener">
+    <a class="{{concat "gh-social-" slug}}" href="{{url}}" title="{{label}}" aria-label="{{label}}" target="_blank" rel="noopener">
         {{~#match slug "avatar"~}}{{> "icons/avatar"}}{{/match~}}
         {{~#match slug "discord"~}}{{> "icons/discord"}}{{/match~}}
         {{~#match slug "facebook"~}}{{> "icons/facebook"}}{{/match~}}
