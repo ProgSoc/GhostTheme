@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{meta_title}}</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+    :root {
+      color-scheme: dark light;
+    }
+    body {
+      font-family: Lora, serif;
+    }
+    header {
+      margin: 5em auto;
+    }
+    header img {
+      display: block;
+      margin: auto;
+    }
+    header h1 {
+      margin: auto;
+      text-align: center;
+      font-size: min(5rem, 14vw);
+    }
+    h2, h3, h4 {
+      margin-top: 2em;
+    }
+    main {
+      margin: 5em auto;
+      padding: 0 0.5em;
+      max-width: 80ch;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+{{#post}}
+  <header>
+    <img src="{{asset "img/progsoc-stamp.png"}}"/>
+    <h1>{{title}}</h1>
+  </header>
+  <hr/>
+  <main>
+    {{content}}
+  </main>
+{{/post}}
+</body>
+</html>
